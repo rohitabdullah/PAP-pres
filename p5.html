@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Future Scope | CyberVenom</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      font-family: 'Share Tech Mono', monospace;
+      background: radial-gradient(ellipse at center, #000 0%, #010a0a 100%);
+      color: #00fff2;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 0;
+    }
+
+    .section {
+      position: relative;
+      min-height: 100vh;
+      padding: 80px 20px;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background: rgba(0, 255, 204, 0.05);
+      border: 1px solid #00fff0;
+      border-radius: 12px;
+      padding: 30px;
+      max-width: 850px;
+      box-shadow: 0 0 20px rgba(0,255,204,0.3);
+      backdrop-filter: blur(4px);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      box-shadow: 0 0 25px rgba(0,255,204,0.6);
+      transform: scale(1.01);
+    }
+
+    .card h1 {
+      font-size: 2.4rem;
+      color: #00ffee;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #00ffee;
+    }
+
+    .card ul {
+      padding-left: 20px;
+      line-height: 1.7;
+    }
+
+    .card li {
+      margin-bottom: 10px;
+      color: #b7fff2;
+    }
+
+    .nav-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: transparent;
+      border: 2px solid #00ffd5;
+      padding: 12px 20px;
+      color: #00ffd5;
+      cursor: pointer;
+      font-size: 1rem;
+      text-transform: uppercase;
+      border-radius: 8px;
+      z-index: 2;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .nav-btn:hover {
+      background: #00ffd5;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <div class="section">
+    <div class="card">
+      <h1>Future Implementation</h1>
+      <ul>
+        <li>🔐 Integration of AI-driven phishing detection using natural language processing.</li>
+        <li>📱 Development of mobile app versions for Android & iOS.</li>
+        <li>📊 Admin dashboard with user activity analytics and performance reports.</li>
+        <li>🧠 Gamification of the training module to boost learning engagement.</li>
+        <li>🌐 Support for multiple languages to expand global accessibility.</li>
+        <li>💬 Community feedback and reporting system to share real phishing attempts.</li>
+        <li>🛡️ Browser extensions for real-time phishing detection during browsing.</li>
+        <li>🔄 Continuous update of phishing patterns and threat databases via APIs.</li>
+      </ul>
+    </div>
+  </div>
+
+  <button class="nav-btn" onclick="goNext()">Next →</button>
+
+  <!-- particles.js -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 130, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#00ffd5" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.9 },
+        "size": { "value": 2, "random": true },
+        "line_linked": {
+          "enable": true,
+          "distance": 110,
+          "color": "#00ffd5",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 1.6,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "attract": { "enable": true, "rotateX": 1000, "rotateY": 1200 }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "attract" },
+          "onclick": { "enable": true, "mode": "push" },
+          "resize": true
+        },
+        "modes": {
+          "attract": { "distance": 200, "duration": 0.4 },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+
+    function goNext() {
+      window.location.href = "p6.html"; // set this to your next page
+    }
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") goNext();
+    });
+  </script>
+</body>
+</html>

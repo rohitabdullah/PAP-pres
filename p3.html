@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abstract | CyberVenom</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      font-family: 'Share Tech Mono', monospace;
+      background: radial-gradient(ellipse at center, #000 0%, #020d0d 100%);
+      color: #00ff88;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 0;
+    }
+
+    .section {
+      position: relative;
+      min-height: 100vh;
+      padding: 100px 20px;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background: rgba(0, 255, 136, 0.05);
+      border: 1px solid #00ff88;
+      border-radius: 12px;
+      padding: 30px;
+      max-width: 850px;
+      box-shadow: 0 0 20px rgba(0,255,136,0.3);
+      backdrop-filter: blur(4px);
+    }
+
+    .card h1 {
+      font-size: 2.5rem;
+      color: #00ffaa;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #00ffaa;
+    }
+
+    .card p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #aaffdd;
+    }
+
+    .nav-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: transparent;
+      border: 2px solid #00ff88;
+      padding: 12px 20px;
+      color: #00ff88;
+      cursor: pointer;
+      font-size: 1rem;
+      text-transform: uppercase;
+      border-radius: 8px;
+      z-index: 2;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .nav-btn:hover {
+      background: #00ff88;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <div class="section">
+    <div class="card">
+      <h1>Abstract</h1>
+      <p>
+        This project introduces the <strong>Phishing Awareness Portal</strong>; an interactive educational toolkit designed to raise awareness and enhance understanding of phishing threats.<br><br>
+        The portal offers three major features: a phishing quiz for training and evaluation, a suspicious email address analyzer, and a scam website checker.<br><br>
+        All modules are browser-based and visually styled to attract user engagement while providing real-time feedback.<br><br>
+        With phishing being one of the most exploited cyber threats globally, this toolkit aims to inform and protect users through hands-on simulation, interactive learning, and real-time detection mechanisms.
+      </p>
+    </div>
+  </div>
+
+  <button class="nav-btn" onclick="goNext()">Next →</button>
+
+  <!-- particles.js -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 140, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#00ff88" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.8, "random": false },
+        "size": { "value": 2, "random": true },
+        "line_linked": {
+          "enable": true,
+          "distance": 110,
+          "color": "#00ff88",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 1.6,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "attract": { "enable": true, "rotateX": 1000, "rotateY": 1200 }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "attract" },
+          "onclick": { "enable": true, "mode": "push" },
+          "resize": true
+        },
+        "modes": {
+          "attract": { "distance": 200, "duration": 0.4 },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+
+    function goNext() {
+      window.location.href = "p4.html"; // update later
+    }
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") goNext();
+    });
+  </script>
+</body>
+</html>
