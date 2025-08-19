@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Features | CyberVenom</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      font-family: 'Share Tech Mono', monospace;
+      background: radial-gradient(ellipse at center, #000 0%, #011010 100%);
+      color: #00ffcc;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 0;
+    }
+
+    .section {
+      position: relative;
+      min-height: 100vh;
+      padding: 80px 20px;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .page-title {
+     text-align: center;
+     font-size: 2.4rem;
+     margin-bottom: 50px;
+     color: #00ffee;
+     text-shadow: 0 0 15px #00ffee, 0 0 30px rgba(0,255,204,0.7);
+   }
+
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .tile {
+      background: rgba(0, 255, 204, 0.06);
+      border: 1px solid #00ffd5;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 0 18px rgba(0,255,204,0.25);
+      backdrop-filter: blur(4px);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .tile:hover {
+      box-shadow: 0 0 25px rgba(0,255,204,0.6);
+      transform: translateY(-6px) scale(1.03);
+    }
+
+    .tile h2 {
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+      color: #00ffee;
+      text-shadow: 0 0 10px #00ffee;
+    }
+
+    .tile p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #b7fff2;
+    }
+
+    .nav-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: transparent;
+      border: 2px solid #00ffd5;
+      padding: 12px 20px;
+      color: #00ffd5;
+      cursor: pointer;
+      font-size: 1rem;
+      text-transform: uppercase;
+      border-radius: 8px;
+      z-index: 2;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .nav-btn:hover {
+      background: #00ffd5;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <div class="section">
+  <div>
+    <h1 class="page-title">Existing Systems</h1>
+    <div class="grid">
+      <div class="tile">
+        <h2>Interactive Quizzes</h2>
+        <p>Engage with real-world phishing scenarios to sharpen awareness, test instincts, and build safe online habits.</p>
+      </div>
+      <div class="tile">
+        <h2>Malicious Email Detector</h2>
+        <p>Analyze suspicious email addresses to spot spoofed domains and catch phishing attempts before they can harm you.</p>
+      </div>
+      <div class="tile">
+        <h2>Malicious URL Detector</h2>
+        <p>Instantly scan and verify links, helping you identify fake websites and avoid credential theft or malware traps.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <button class="nav-btn" onclick="goNext()">Next →</button>
+
+  <!-- particles.js -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 130, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#00ffd5" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.9 },
+        "size": { "value": 2, "random": true },
+        "line_linked": {
+          "enable": true,
+          "distance": 110,
+          "color": "#00ffd5",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 1.6,
+          "attract": { "enable": true, "rotateX": 1000, "rotateY": 1200 }
+        }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": { "enable": true, "mode": "attract" },
+          "onclick": { "enable": true, "mode": "push" },
+          "resize": true
+        },
+        "modes": {
+          "attract": { "distance": 200, "duration": 0.4 },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+
+    function goNext() {
+      window.location.href = "p4b.html"; // link to your next page
+    }
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") goNext();
+    });
+  </script>
+</body>
+</html>
